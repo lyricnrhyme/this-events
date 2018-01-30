@@ -11,6 +11,11 @@ for (var i=0; i<navElem.length; i++) {
 	navElem[i].addEventListener("click", openNav);
 }
 
+var innerElem = document.getElementsByClassName("inner");
+for (var i=0; i<innerElem.length; i++) {
+	innerElem[i].style.display = "none";
+}
+
 function openNav() {
 	// console.log("openNav test");
 	var innerNav = this.querySelector(".inner");
@@ -30,8 +35,12 @@ for (var i=0; i<menuElem.length; i++) {
 	menuElem[i].addEventListener("click", revealMenu);
 }
 
+var menuDisplay = document.getElementsByClassName("menu");
+menuDisplay.style.display = "none";
+
 function revealMenu() {
 	console.log("reveal menu");
+
 	var menuRevealed = this.querySelector(".menu");
 	if (menuRevealed.style.display === "none") {
 		menuRevealed.style.display = "block";
